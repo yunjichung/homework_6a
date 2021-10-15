@@ -13,7 +13,7 @@ a {
     font-size: 20px; text-decoration: none; /*text settings*/
 }
 .productnav {
-    color: #EB7B6D; /*color settings*/
+    color: #987963; /*color settings*/
     font-size: 20px; text-decoration: none; /*text settings*/
 }
 .aboutnav {
@@ -21,7 +21,7 @@ a {
     font-size: 20px; text-decoration: none; /*text settings*/
 }
 .cartnav {
-    color: #987963; /*color settings*/
+    color: #EB7B6D; /*color settings*/
     font-size: 20px; text-decoration: none; /*text settings*/
 }
 #home {
@@ -103,14 +103,19 @@ a {
     padding: 10px 20px 10px 20px; display: inline-block; /*layout settings*/
 }
 .buybutton {
-    background-color: #EB7B6D; color: #FFFFFF; opacity: 50%; /*color settings*/
+    background-color: #EB7B6D; color: #FFFFFF; /*color settings*/
     font-size: 15px; text-align: center; border: none; border-radius: 35px; font-family: 'Rowdies'; /*text settings*/
     padding: 10px 40px 10px 40px; display: inline-block; /*layout settings*/
 }
 .cartbutton {
-    background-color: #EB9A6D; color: #FFFFFF; opacity: 50%; /*color settings*/
+    background-color: #EB7B6D; color: #FFFFFF; /*color settings*/
     font-size: 15px; text-align: center; border: none; border-radius: 35px; font-family: 'Rowdies'; /*text settings*/
-    padding: 10px 40px 10px 40px; display: inline-block; /*layout settings*/
+    padding: 10px 40px 10px 40px; display: inline-block;/*layout settings*/
+}
+
+.cartbutton:hover {
+    background-color: #EB7B6D; opacity: 80%;
+    cursor: pointer;
 }
 
 #favorite {
@@ -165,4 +170,52 @@ a {
 .back {
     color: #EB7B6D;
     text-decoration: none;
+}
+
+.container {
+    cursor: pointer;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    padding: 10px 70px 10px 70px;
+    background-color: #B9A394;
+    color: #FFFFFF;
+    border-radius: 35px;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: #F0E4DC;
+    color: #B9A394;
+  }
+  
+  .checkmark2 {
+      display: inline-block; margin-top: 12px;
+    padding: 10px 45px 10px 45px;
+    background-color: #B9A394;
+    color: #FFFFFF;
+    border-radius: 35px;
+  }
+
+  .container input:checked ~ .checkmark2 {
+    background-color: #F0E4DC;
+    color: #B9A394;
+  }
+
+  .checkmark3 {
+    display: inline-block;
+  padding: 10px 20px 10px 20px;
+  background-color: #B9A394;
+  color: #FFFFFF;
+  border-radius: 35px;
+}
+
+.container input:checked ~ .checkmark3 {
+  background-color: #F0E4DC;
+  color: #B9A394;
 }

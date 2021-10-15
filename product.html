@@ -7,16 +7,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+        <script defer src="product.js"></script>
+        <script src="jquery-3.6.0.min.js"></script>
     </head>
 
-    <body>
-        <div id="home"><a class="homenav" href="index.html">Home</a></div>
-        <ul class="ulnav">
-            <li class="linav"><a class="productnav" id="spacing" href="productlist.html">Products</a></li>
-            <li class="linav"><a class="aboutnav" id="spacing" href="#">About</a></li>
-            <li class="linav"><a class="cartnav" href="#">Cart</a></li>
-        </ul>
+    <header id="header"></header>
 
+    <body>
         <div class="left">
             <div class="imgbg">
                 <img class="indiimage" src="images/original.png" alt="original">
@@ -27,34 +24,55 @@
                 <div><p class="indides">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p></div>
                 <div><p class="indiprice">$4.50</p></div>
                 <div><p class="select">Select 1 Glaze</p></div>
-                <div>
+                <form>
                     <div class="button">
-                        <div class="glazebutton" id="space"><p class="buttontext">None</p></div>
-                        <div class="glazebutton"><p class="buttontext">Sugar-Milk</p></div>
+                        <label class="container" id="space">
+                            <input type="radio" name="glazingselection" value="none" id="none" >
+                            <span class="checkmark">None</span>
+                        </label>
+                        <label class="container">
+                            <input type="radio" name="glazingselection" value="sugar" id="sugar">
+                            <span class="checkmark">Sugar-Milk</span>
+                        </label>
                     </div>
                     <div class="button">
-                        <div class="glazebutton2" id="space"><p class="buttontext">Vanilla-Milk</p></div>
-                        <div class="glazebutton2"><p class="buttontext">Double-Chocolate</p></div>
+                        <label class="container" id="space">
+                            <input type="radio" name="glazingselection" value="vanilla" id="vanilla">
+                            <span class="checkmark2">Vanilla-Milk</span>
+                        </label>
+                        <label class="container">
+                            <input type="radio" name="glazingselection" value="chocolate" id="chocolate">
+                            <span class="checkmark2">Double-Chocolate</span>
+                        </label>
                     </div>
-                </div>
+                </form>
                 <div><p class="select">Select Count</p></div>
-                <div>
+                <form>
                     <div class="button">
-                        <div class="countbutton" id="space"><p class="buttontext">1</p></div>
-                        <div class="countbutton" id="space"><p class="buttontext">3</p></div>
-                        <div class="countbutton" id="space"><p class="buttontext">6</p></div>
-                        <div class="countbutton"><p class="buttontext">12</p></div>
+                        <label class="container" id="space">
+                            <input type="radio" name="countselection" value="1">
+                            <span class="checkmark3">1</span>
+                        </label>
+                        <label class="container" id="space">
+                            <input type="radio" name="countselection" value="3">
+                            <span class="checkmark3">3</span>
+                        </label>
+                        <label class="container" id="space">
+                            <input type="radio" name="countselection" value="6">
+                            <span class="checkmark3">6</span>
+                        </label>
+                        <label class="container">
+                            <input type="radio" name="countselection" value="12">
+                            <span class="checkmark3">12</span>
+                        </label>
                     </div>
-                </div>
+                </form>
                 <br><br>
                 <div>
                     <div class="button">
-                        <div class="cartbutton" id="space"><p class="buttontext">Add to Cart</p></div>
-                        <div class="buybutton"><p class="buttontext">Check Out Now</p></div>
+                        <button onclick="appendItems()" class="cartbutton" id="addtocart">Add to Cart</button>
+                        <!-- <input class="cartbutton" id="addtocart" type="button" value="Add to Cart"> -->
                     </div>
-                </div>
-                <div class="errorprevent">
-                    <p>Select both glaze and count to continue</p>
                 </div>
             </div>
         </div>
@@ -104,5 +122,6 @@
                 </div>
             </ul>
         </div>
+    <script src="nav.js"></script>
     </body>
 </html>
