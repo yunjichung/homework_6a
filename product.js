@@ -59,10 +59,6 @@ $('#addtocart').click(function(){
 
 });
 
-
-
-// storing data ----------------------------------------------------------------------------------------------------------
-
 function updateCartIndicator(){
     if (localStorage.getItem("cartNumber")==0){
         $(".cartnav").text("Cart");
